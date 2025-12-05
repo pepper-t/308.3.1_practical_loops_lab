@@ -35,7 +35,7 @@
 
 
 for (i=1; i<=100; i++){
-    if (i % 3 !== 0 && i % 5 !== 0){
+    if (i % 3 !== 0 || i % 5 !== 0){
 
     }
     console.log(i);
@@ -46,6 +46,12 @@ for (i=1; i<=100; i++){
 // If a number is divisible by both 3 and 5, log “Fizz Buzz.”
 
 
+for (i=1; i<=100; i++){
+    if (i % 3 !== 0 && i % 5 !== 0){
+
+    }
+    console.log(i);
+}
 
 
 
