@@ -64,7 +64,8 @@ let newLine = "";//empty string to receive new data without '\n'
 
 //The for...in loop will iterate over the string indices as strings.
 
-for (const i in str){   // i is included to play a role in the number of iterations.
+let=0;
+for (const i in str) {   // i is included to play a role in the number of iterations.
 const currentIndex = num(i);   //Converting each string in the index into numbers.
 const char = str[currentIndex];
 }
