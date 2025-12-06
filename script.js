@@ -34,12 +34,12 @@
 // If a number is not divisible by either 3 or 5, log the number.
 
 
- for (i=1; i<=100; i++){
-     if (i % 3 !== 0 || i % 5 !== 0){
-console.log(i);
-     }
+ //for (i=1; i<=100; i++){
+    // if (i % 3 !== 0 || i % 5 !== 0){
+//console.log(i);
+    // }
      
- }
+// }
 
 
 
@@ -59,33 +59,35 @@ console.log(i);
 // CSVs through past use of programs such as Microsoft Excel or Google Sheets. While each of these programs save their data in 
 // different formats to preserve style (e.g., font color or cell backgrounds), at their core, they are storing CSV data.
 
-let str = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor\'s Assistant,26;"
-let newLine = "";//empty string to receive new data without '\n'
+let str = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26";
+let newLine = "";
+//empty string to receive new data without '\n'
 
 //The for...in loop will iterate over the string indices as strings.
 
-let=0;
+
 for (const i in str) {   // i is included to play a role in the number of iterations.
-const currentIndex = num(i);   //Converting each string in the index into numbers.
+
+const currentIndex = parseInt(i);
 const char = str[currentIndex];
-}
-//Finally....
-    if(char === '\n' || currentIndex=== str.length--){  //(it is .length-1) as it iterates and goes through each cell the 
+
+    if (char === '\n' || currentIndex === str.length - 1) {  //(it is .length-1) as it iterates and goes through each cell the 
     // data is removed.
     // If we are at the last character, we must append it before printing.
-        if (currentIndex === str.length --) {
-            newLine += char;
+    if (currentIndex === str.length - 1) {
+             newLine += char;
         }
-//for (let index = 0; index < array.length; index++) {
-  //  const element = array[index];
+
     console.log(newLine);
-    
-}    
-else {
-        // If it's a regular character (not a newLine), append it to the current line.
+        newLine = ""; // Reset for next line
+     } else {
         newLine += char;
     }
+}
 
+
+//for (let index = 0; index < array.length; index++) {
+  //  const element = array[index];
 //for (char in str) {
 	//if (str[char] == '\n') {
 	//	continue;
